@@ -28,7 +28,7 @@ namespace HomeWork1.BallsMiniGame.GamePlay
             AllBallsArePoped = _balls.All(b => b == null);
         }
 
-        public void CheckOneColorBallsArePoped() //Не смог придумать как реализовать тут Линк
+        public void CheckOneColorBallsArePoped() //Не уверен нужно ли тут использовать Линкю
         {
             _ballsColors.Clear();
 
