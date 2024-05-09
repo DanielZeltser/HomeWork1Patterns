@@ -8,6 +8,11 @@ namespace HomeWork1.Weapons
         [SerializeField] private Gun[] _guns;
         [SerializeField] private GunControl _gunControl;
 
+        private void OnValidate()
+        {
+            _guns = FindObjectsByType<Gun>(FindObjectsInactive.Include, FindObjectsSortMode.InstanceID);
+        }
+
         private void Awake()
         {
             _gunControl.Initialize();
