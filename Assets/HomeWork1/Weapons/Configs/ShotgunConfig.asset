@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c2c9fb6c4baef44ba3ff14c9bfa2bfb, type: 3}
+  m_Name: ShotgunConfig
+  m_EditorClassIdentifier: 
+  <BulletsCount>k__BackingField: 30
+  <BulletsCountOnShot>k__BackingField: 3
+  <Bullet>k__BackingField: {fileID: -7491914687833015377, guid: 64acc784c1b5781459fa8a7bf9f964cb, type: 3}
