@@ -4,10 +4,12 @@ namespace HomeWork1.Weapons.GamePlay
 {
     public sealed class BulletSpawner
     {
+        private const float ShotAreaZ = 0.02f;
+
         private Bullet _bullet;
         private BulletSpawnPoint _bulletSpawnPoint;
 
-        private float RandomPositionZ => Random.Range(-0.02f, 0.02f);
+        private float RandomPositionZ => Random.Range(-ShotAreaZ, ShotAreaZ);
         private Vector3 BulletSpawnPosition => _bulletSpawnPoint.transform.position;
         private Vector3 BulletRandomSpawnPosition =>
             new (BulletSpawnPosition.x, BulletSpawnPosition.y, BulletSpawnPosition.z + RandomPositionZ);
