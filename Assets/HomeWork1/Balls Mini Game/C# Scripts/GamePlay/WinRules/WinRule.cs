@@ -8,7 +8,6 @@ namespace HomeWork1.BallsMiniGame.GamePlay
         [SerializeField] private GameObject _winRulesView;
         public event Action SettedThisWinRule;
 
-        
         public virtual void Select()
         {
             Destroy(_winRulesView);
