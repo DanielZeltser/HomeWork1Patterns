@@ -6,6 +6,9 @@ namespace HomeWork1.Trader.GamePlay
 
     public sealed class Trader : MonoBehaviour
     {
+        private const int ArmorPrice = 3;
+        private const int FruitsPrice = 1;
+        
         private ITrade _tradeBehavior;
 
         private void OnTriggerEnter(Collider other)
@@ -15,10 +18,10 @@ namespace HomeWork1.Trader.GamePlay
                 if(customer.MoneyAmount == 0)
                     OnTrade(new NoTrade());
 
-                if (customer.MoneyAmount > 0 && customer.MoneyAmount < 3)
+                if (customer.MoneyAmount >= FruitsPrice && customer.MoneyAmount < ArmorPrice)
                     OnTrade(new FruitsTrade());
 
-                if(customer.MoneyAmount >= 3)
+                if(customer.MoneyAmount >= ArmorPrice)
                     OnTrade(new ArmorTrade());
             }
         }
