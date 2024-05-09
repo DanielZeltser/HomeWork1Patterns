@@ -19,7 +19,7 @@ namespace HomeWork1.Weapons.GamePlay
 
         private void DisableCurrentGun() => _guns[_index].gameObject.SetActive(false);
 
-        private void EnableNextGun() //Не смог придумать как реализовать тут Линк
+        private void EnableNextGun() //Не смог придумать более элегантную реализацию
         {
             _index++;
             if (_index == _guns.Length)
