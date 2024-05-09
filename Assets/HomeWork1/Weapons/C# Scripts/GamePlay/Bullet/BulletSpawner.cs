@@ -7,8 +7,8 @@ namespace HomeWork1.Weapons.GamePlay
         private const float MinShotAreaZ = -0.02f;
         private const float MaxShotAreaZ = 0.02f;
 
-        private Bullet _bullet;
-        private BulletSpawnPoint _bulletSpawnPoint;
+        private readonly Bullet _bullet;
+        private readonly BulletSpawnPoint _bulletSpawnPoint;
 
         private float RandomPositionZ => Random.Range(MinShotAreaZ, MaxShotAreaZ);
         private Vector3 BulletSpawnPosition => _bulletSpawnPoint.transform.position;
