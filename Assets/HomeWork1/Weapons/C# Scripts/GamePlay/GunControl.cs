@@ -19,12 +19,12 @@ namespace HomeWork1.Weapons.GamePlay
                 SwitchGun();
 
             if (Input.GetKeyDown(KeyCode.Space))
-                Shoot();
+                OnShoot();
         }
 
         private void SwitchGun() => _gunSwitcher.SwitchToNext();
 
-        private void Shoot()
+        private void OnShoot()
         {
             foreach (Gun gun in _guns)
                 if (gun.isActiveAndEnabled)
