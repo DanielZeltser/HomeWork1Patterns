@@ -16,12 +16,19 @@ namespace HomeWork1.Weapons.GamePlay
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.S))
-                _gunSwitcher.SwitchToNext();
+                SwitchGun();
 
             if (Input.GetKeyDown(KeyCode.Space))
-                foreach (Gun gun in _guns)
-                    if(gun.isActiveAndEnabled)
-                        gun.Shoot();
+                Shoot();
+        }
+
+        private void SwitchGun() => _gunSwitcher.SwitchToNext();
+
+        private void Shoot()
+        {
+            foreach (Gun gun in _guns)
+                if (gun.isActiveAndEnabled)
+                    gun.Shoot();
         }
     }
 }
