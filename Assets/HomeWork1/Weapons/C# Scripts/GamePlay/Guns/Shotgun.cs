@@ -11,6 +11,8 @@ namespace HomeWork1.Weapons.GamePlay
         private int _bulletsCount;
         private BulletSpawner _bulletSpawner;
 
+        private bool ShotgunHasBullets => _bulletsCount > 0;
+
         public override void Initialize()
         {
             _bulletSpawner = new BulletSpawner(_config.Bullet, _bulletSpawnPoint);
@@ -24,7 +26,7 @@ namespace HomeWork1.Weapons.GamePlay
 
             for (int value = _config.BulletsCountOnShot; value > 0; value--)
             {
-                if (_bulletsCount > 0)
+                if (ShotgunHasBullets)
                 {
                     _bulletSpawner.RandomSpawn();
                     _bulletsCount -= 1;
