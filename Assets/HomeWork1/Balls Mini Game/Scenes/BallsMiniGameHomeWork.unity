@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &37660031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37660033}
+  - component: {fileID: 37660032}
+  m_Layer: 0
+  m_Name: UIViewHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &37660032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37660031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72024bdd18d718488ed1f1a863b8f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _victoryView: {fileID: 1140055834}
+  _victoryConditionsView: {fileID: 1747692878}
+--- !u!4 &37660033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37660031}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &50325783
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,6 +181,7 @@ GameObject:
   - component: {fileID: 50325787}
   - component: {fileID: 50325786}
   - component: {fileID: 50325785}
+  - component: {fileID: 50325789}
   - component: {fileID: 50325788}
   m_Layer: 0
   m_Name: Ball Yellow
@@ -238,10 +285,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 50325783}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba4a2c21e503394dad20dda3acfdf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &50325789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50325783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e379e10c7d7e1f4791b03eb553d6a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _winChecker: {fileID: 2123261431}
+  <BallColor>k__BackingField: 2
 --- !u!1 &56565182
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,51 +546,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168345434}
   m_CullTransparentMesh: 1
---- !u!1 &489992907
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 489992909}
-  - component: {fileID: 489992908}
-  m_Layer: 0
-  m_Name: GameEvent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &489992908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489992907}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 038015161f0466a43ac6d75417964cba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _winView: {fileID: 1140055834}
---- !u!4 &489992909
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489992907}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548404675
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,7 +847,8 @@ GameObject:
   - component: {fileID: 730528296}
   - component: {fileID: 730528295}
   - component: {fileID: 730528294}
-  - component: {fileID: 730528293}
+  - component: {fileID: 730528298}
+  - component: {fileID: 730528297}
   m_Layer: 0
   m_Name: Ball Red
   m_TagString: Untagged
@@ -856,19 +871,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 630001672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &730528293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730528291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e379e10c7d7e1f4791b03eb553d6a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _winChecker: {fileID: 2123261431}
 --- !u!135 &730528294
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -940,6 +942,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730528291}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &730528297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730528291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba4a2c21e503394dad20dda3acfdf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &730528298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730528291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e379e10c7d7e1f4791b03eb553d6a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <BallColor>k__BackingField: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1208,6 @@ GameObject:
   - component: {fileID: 1019647578}
   - component: {fileID: 1019647577}
   - component: {fileID: 1019647576}
-  - component: {fileID: 1019647579}
   m_Layer: 5
   m_Name: Pop All Balls
   m_TagString: Untagged
@@ -1253,9 +1279,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1019647579}
-        m_TargetAssemblyTypeName: HomeWork1.BallsMiniGame.GamePlay.PopAllBalls, Assembly-CSharp
-        m_MethodName: Select
+      - m_Target: {fileID: 1840007068}
+        m_TargetAssemblyTypeName: HomeWork1.BallsMiniGame.GamePlay.Level, Assembly-CSharp
+        m_MethodName: SelectPopAllBalls
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1303,19 +1329,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019647574}
   m_CullTransparentMesh: 1
---- !u!114 &1019647579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019647574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bad5bf945f88b784a9c8ec77178ab15e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _winRulesView: {fileID: 1747692878}
 --- !u!1 &1080314379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,6 +1341,7 @@ GameObject:
   - component: {fileID: 1080314383}
   - component: {fileID: 1080314382}
   - component: {fileID: 1080314381}
+  - component: {fileID: 1080314385}
   - component: {fileID: 1080314384}
   m_Layer: 0
   m_Name: Ball Yellow
@@ -1431,10 +1445,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1080314379}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba4a2c21e503394dad20dda3acfdf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1080314385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080314379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e379e10c7d7e1f4791b03eb553d6a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _winChecker: {fileID: 2123261431}
+  <BallColor>k__BackingField: 2
 --- !u!1 &1140055832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,7 +1472,7 @@ GameObject:
   - component: {fileID: 1140055833}
   - component: {fileID: 1140055834}
   m_Layer: 5
-  m_Name: Win View
+  m_Name: Victory View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1638,7 +1664,6 @@ GameObject:
   - component: {fileID: 1484596835}
   - component: {fileID: 1484596834}
   - component: {fileID: 1484596833}
-  - component: {fileID: 1484596836}
   m_Layer: 5
   m_Name: 'Pop One Color '
   m_TagString: Untagged
@@ -1710,9 +1735,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1484596836}
-        m_TargetAssemblyTypeName: HomeWork1.BallsMiniGame.GamePlay.PopOneColor, Assembly-CSharp
-        m_MethodName: Select
+      - m_Target: {fileID: 1840007068}
+        m_TargetAssemblyTypeName: HomeWork1.BallsMiniGame.GamePlay.Level, Assembly-CSharp
+        m_MethodName: SelectPopOneColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1760,19 +1785,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484596831}
   m_CullTransparentMesh: 1
---- !u!114 &1484596836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1484596831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90be68358b3c8874ebbb69632f3b9c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _winRulesView: {fileID: 1747692878}
 --- !u!1 &1491836820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,7 +1829,8 @@ GameObject:
   - component: {fileID: 1523439747}
   - component: {fileID: 1523439746}
   - component: {fileID: 1523439745}
-  - component: {fileID: 1523439744}
+  - component: {fileID: 1523439750}
+  - component: {fileID: 1523439749}
   m_Layer: 0
   m_Name: Ball Green
   m_TagString: Untagged
@@ -1825,19 +1838,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1523439744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523439743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e379e10c7d7e1f4791b03eb553d6a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _winChecker: {fileID: 2123261431}
 --- !u!135 &1523439745
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1924,6 +1924,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1491836821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1523439749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523439743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba4a2c21e503394dad20dda3acfdf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1523439750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523439743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e379e10c7d7e1f4791b03eb553d6a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <BallColor>k__BackingField: 0
 --- !u!1 &1535881946
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,6 +2127,7 @@ GameObject:
   - component: {fileID: 1695928457}
   - component: {fileID: 1695928456}
   - component: {fileID: 1695928455}
+  - component: {fileID: 1695928459}
   - component: {fileID: 1695928458}
   m_Layer: 0
   m_Name: Ball Red
@@ -2205,10 +2231,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1695928453}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba4a2c21e503394dad20dda3acfdf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1695928459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695928453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e379e10c7d7e1f4791b03eb553d6a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _winChecker: {fileID: 2123261431}
+  <BallColor>k__BackingField: 1
 --- !u!1 &1747692878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,7 +2257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747692879}
   m_Layer: 5
-  m_Name: Win Rules View
+  m_Name: Victory Conditions View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2260,6 +2298,7 @@ GameObject:
   - component: {fileID: 1811255471}
   - component: {fileID: 1811255470}
   - component: {fileID: 1811255469}
+  - component: {fileID: 1811255473}
   - component: {fileID: 1811255472}
   m_Layer: 0
   m_Name: Ball Green
@@ -2363,10 +2402,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1811255467}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba4a2c21e503394dad20dda3acfdf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1811255473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811255467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e379e10c7d7e1f4791b03eb553d6a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _winChecker: {fileID: 2123261431}
+  <BallColor>k__BackingField: 0
 --- !u!1 &1831455344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,6 +2552,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831455344}
   m_CullTransparentMesh: 1
+--- !u!1 &1840007067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840007069}
+  - component: {fileID: 1840007068}
+  m_Layer: 0
+  m_Name: VictoryConditionSelector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1840007068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840007067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2139a634c47e79143824d9a2b5f53b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uiViewHandler: {fileID: 37660032}
+  _balls:
+  - {fileID: 1811255473}
+  - {fileID: 1695928459}
+  - {fileID: 1523439750}
+  - {fileID: 1080314385}
+  - {fileID: 730528298}
+  - {fileID: 50325789}
+  _allBallColors: 000000000200000001000000
+--- !u!4 &1840007069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840007067}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1855364342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,13 +2832,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _balls:
-  - {fileID: 1523439744}
-  - {fileID: 730528293}
-  - {fileID: 1811255472}
-  - {fileID: 1695928458}
-  - {fileID: 1080314384}
-  - {fileID: 50325788}
-  _winCheker: {fileID: 2123261431}
+  - {fileID: 1811255473}
+  - {fileID: 1695928459}
+  - {fileID: 1523439750}
+  - {fileID: 1080314385}
+  - {fileID: 730528298}
+  - {fileID: 50325789}
 --- !u!4 &2027014995
 Transform:
   m_ObjectHideFlags: 0
@@ -2742,64 +2845,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027014993}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2123261430
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2123261432}
-  - component: {fileID: 2123261431}
-  m_Layer: 0
-  m_Name: GameEventChecker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2123261431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123261430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 761f3a4c69179fd49b7a466468229dd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _balls:
-  - {fileID: 1523439744}
-  - {fileID: 730528293}
-  - {fileID: 1811255472}
-  - {fileID: 1695928458}
-  - {fileID: 1080314384}
-  - {fileID: 50325788}
-  _materials:
-  - {fileID: 2100000, guid: f01cad1e677567d42a352a7c68b7b377, type: 2}
-  - {fileID: 2100000, guid: 355490b3d2399e44b8eeec84d47dbf60, type: 2}
-  - {fileID: 2100000, guid: bd01a26ee03092a439ad71dd9fe469ec, type: 2}
-  _win: {fileID: 489992908}
-  _popOneColor: {fileID: 1484596836}
-  _popAllBalls: {fileID: 1019647579}
---- !u!4 &2123261432
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123261430}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2816,9 +2861,9 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 709941916}
   - {fileID: 2027014995}
-  - {fileID: 489992909}
-  - {fileID: 2123261432}
+  - {fileID: 1840007069}
   - {fileID: 571813006}
+  - {fileID: 37660033}
   - {fileID: 997619565}
   - {fileID: 1864517959}
   - {fileID: 1410926754}

@@ -1,29 +1,19 @@
+
 using UnityEngine;
 
 namespace HomeWork1.BallsMiniGame.GamePlay
 {
+    [RequireComponent(typeof(BallTouch))]
+
     public sealed class Ball : MonoBehaviour
     {
-        private const float BallPopping = 0.1f;
+        [field: SerializeField] public BallColors BallColor {  get; private set; }
 
-        [SerializeField] private WinChecker _winChecker;
-
-        public Color MaterialColor { get; private set; }
+        public BallTouch Touch { get; private set; }
 
         public void Initialize()
         {
-            MaterialColor = GetComponent<MeshRenderer>().material.color;
-        }
-
-        private void OnMouseDown()
-        {
-            OnPop();
-        }
-
-        private void OnPop()
-        {
-            _winChecker.CheckInDelay(BallPopping);
-            Destroy(gameObject);
+            Touch = GetComponent<BallTouch>();
         }
     }
 }
